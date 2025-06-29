@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunnelAI | AI-Powered Sales Funnel Automation</title>
+    <style>
+        :root {
+            --primary: #6e8efb;
+            --secondary: #a777e3;
+            --accent: #ff6b6b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background: white;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero {
+            margin-top: 80px;
+            padding: 120px 5%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            background: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 5% 10%;
+            margin-top: -50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .features {
+                padding: 5% 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">FunnelAI</div>
+    </nav>
+
+    <section class="hero">
+        <h1>Automate Your Sales Funnel in Minutes</h1>
+        <p>AI-powered funnel builder designed specifically for marketing consultants. Create high-converting landing pages without coding.</p>
+        <button class="cta-button" onclick="showDemo()">Start Free Trial →</button>
+    </section>
+
+    <div class="features">
+        <div class="feature-card">
+            <h3>AI Lead Scoring</h3>
+            <p>Automatically prioritize high-intent prospects using machine learning algorithms.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Pre-Built Templates</h3>
+            <p>Choose from 50+ conversion-optimized templates for webinars, eBooks, and consultations.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Real-Time Analytics</h3>
+            <p>Track funnel performance with live dashboards and conversion rate optimization insights.</p>
+        </div>
+    </div>
+
+    <script>
+        function showDemo() {
+            // In real implementation, replace with form submission logic
+            alert("Demo request received! Check your email for next steps.");
+            
+            // Example form submission code:
+            /*
+            const formData = new FormData();
+            formData.append('email', prompt('Enter your email:'));
+            
+            fetch('https://api.funnelai.com/demo', {
+                method: 'POST',
+                body: formData
+            }).then(response => alert('Thank you! We\'ll contact you soon.'));
+            */
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
