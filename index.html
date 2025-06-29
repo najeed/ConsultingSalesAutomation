@@ -121,6 +121,11 @@
         <p>AI-powered funnel builder designed specifically for marketing consultants. Create high-converting landing pages without coding.</p>
         <button class="cta-button" onclick="showDemo()">Start Free Trial →</button>
         <img src="https://via.placeholder.com/800x400" alt="Funnel Builder Preview" style="max-width: 100%; margin-top: 2rem;">
+        <form id="demoForm" action="https://api.funnelai.com/demo" method="POST">
+            <input type="email" name="email" placeholder="Enter your work email" required>
+            <button type="submit" class="cta-button">Get Instant Access</button>
+        </form>
+
     </section>
 
     <div class="features">
@@ -141,10 +146,10 @@
     <script>
         function showDemo() {
             // In real implementation, replace with form submission logic
-            alert("Demo request received! Check your email for next steps.");
+            //alert("Demo request received! Check your email for next steps.");
             
             // Example form submission code:
-            /*
+            
             const formData = new FormData();
             formData.append('email', prompt('Enter your email:'));
             
@@ -152,7 +157,7 @@
                 method: 'POST',
                 body: formData
             }).then(response => alert('Thank you! We\'ll contact you soon.'));
-            */
+            
         }
 
         // Smooth scroll for anchor links
